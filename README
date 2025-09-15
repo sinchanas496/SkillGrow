@@ -1,37 +1,17 @@
-# SkillGrow Backend
+SkillGrow
 
-## Quick Start
-1. `cd server`
-2. `cp .env.example .env` and set values
-3. Ensure MongoDB is running locally
-4. `npm install`
-5. `npm run dev`
+SkillGrow is a full-stack web application that helps students and professionals **track their learning progress, manage skills, and achieve career growth**.
 
-## Test with cURL
-- Register:
-```
-curl -X POST http://localhost:5000/api/auth/register \
- -H "Content-Type: application/json" \
- -d '{"name":"Sinchana","email":"s@test.com","password":"secret123"}'
-```
-- Login:
-```
-curl -X POST http://localhost:5000/api/auth/login \
- -H "Content-Type: application/json" \
- -d '{"email":"s@test.com","password":"secret123"}'
-```
-- Create Log (replace TOKEN):
-```
-curl -X POST http://localhost:5000/api/logs \
- -H "Authorization: Bearer TOKEN" -H "Content-Type: application/json" \
- -d '{"subject":"DBMS","topic":"Normalization","confidence":2,"minutes":30}'
-```
-- Stats:
-```
-curl -H "Authorization: Bearer TOKEN" http://localhost:5000/api/logs/stats
-```
+🚀 Features
+Secure user authentication
+Personalized dashboard with progress tracking
+Notes and task management
+Analytics with charts and reports
+Goal setting and achievement tracking
 
-## Notes
-- Keep only MongoDB; remove any MySQL packages.
-- Set `CLIENT_ORIGIN` to your Vite URL for CORS (e.g., http://localhost:5173).
-- Dates are ISO strings; the API accepts an optional `date` field for backfilling.
+🛠️ Tech Stack
+Frontend: React, Tailwind CSS
+Backend: Node.js, Express.js
+Database: MongoDB
+Other Tools: JWT Authentication, Chart.js
+
